@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload and Share</title>
+    <style>
+        body {
+            background: url('images/background_upload.jpg') center/cover no-repeat fixed; /* Updated background image */
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #3498db; /* Updated background color to a shade of blue */
+            color: #fff; /* Updated text color to white */
+        }
+
+        h1 {
+            color: rgb(69, 35, 35);
+           font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin-top: 20px; /* Adjusted margin to move the h1 to the top */
+            margin-bottom: 20px;
+            font-size: 24px; /* Increased font size for better visibility */
+        }
+
+        #upload-container {
+            text-align: center;
+            padding: 20px;
+            color: rgb(69, 35, 35);
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        #file-input {
+            display: none;
+        }
+
+        #file-label {
+            display: inline-block;
+            background-color: black;
+            color: #fff;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        #file-label:hover {
+            background-color: black;
+        }
+
+        #file-info {
+            margin-top: 10px;
+            font-size: 14px;
+            color: #2c3e50;
+        }
+
+        #upload-button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #27ae60;
+            color: #fff;
+            font-size: 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        #upload-button:hover {
+            background-color: #219d54;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Upload and Share Your Content with Others Worldwide</h1>
+
+    <div id="upload-container">
+        <form id="upload-form" action="upload.php" method="post" enctype="multipart/form-data">
+            <input type="file" name="files[]" multiple />
+            <button type="submit" id="upload-button">Upload Files</button>
+        </form>
+    </div>
+
+</body>
+</html>
